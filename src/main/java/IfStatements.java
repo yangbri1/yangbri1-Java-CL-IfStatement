@@ -51,10 +51,11 @@ public class IfStatements {
      * @return - "Yes", "No", or "Not quite!" depending on the input. 
      */
     public String exercise3(int year) { // method w/ public access, return String
-        // return null;
+        // using modulo division to find remainder from year after dividing by 4
         if(year % 4 == 0){
-            if((year % 100 == 0) & !(year % 400 == 0)){
-                return("Note quite");
+            // implemented bitwise AND operator & as it checks both sides
+            if((year % 100 == 0) & !(year % 400 == 0)){ // year % 400 != 0 -- also works!
+                return("Not quite");
             }
             else if((year % 100 == 0) & (year % 400 ==0)){
                 return("Yes");
@@ -63,7 +64,9 @@ public class IfStatements {
                 return("Yes");
             }
         }
+        // if year is not an multiple of 4 ...
         else{
+            // not a leap year
             return("No");
         }
     }
