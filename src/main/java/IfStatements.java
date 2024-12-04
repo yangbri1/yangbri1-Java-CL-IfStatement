@@ -11,8 +11,9 @@ public class IfStatements {
      * @param y    - second number to be compared.
      * @return - x if bool is true, otherwise return y.
      */
-    public int exercise1(boolean bool, int x, int y) {
-        return 0;
+    public int exercise1(boolean bool, int x, int y) {  // method w/ public access modifier, returns an int data type
+        // testing out ternary operator here instead of if statements
+        return (bool ? x : y);  // if variable "bool" is true, return int "x" otw return int "y"
     }
 
     /**
@@ -21,8 +22,18 @@ public class IfStatements {
      * @param x - a number that could be positive, negative, or zero.
      * @return - "Positive", "Negative", or "Zero" depending on the input.
      */
-    public String exercise2(int x) {
-        return null;
+    public String exercise2(int x) {    // method w/ public access modifier, returns String
+        // String numberType = "";
+        if(x < 0){
+            return("Negative");
+        }
+        else if(x == 0){
+            return("Zero");
+        }
+        else{
+            return("Positive");
+        }
+        // return null;
     }
 
     /**
@@ -39,7 +50,21 @@ public class IfStatements {
      * @param year - an integer representing a year.
      * @return - "Yes", "No", or "Not quite!" depending on the input. 
      */
-    public String exercise3(int year) {
-        return null;
+    public String exercise3(int year) { // method w/ public access, return String
+        // return null;
+        if(year % 4 == 0){
+            if((year % 100 == 0) & !(year % 400 == 0)){
+                return("Note quite");
+            }
+            else if((year % 100 == 0) & (year % 400 ==0)){
+                return("Yes");
+            }
+            else{
+                return("Yes");
+            }
+        }
+        else{
+            return("No");
+        }
     }
 }
